@@ -2,6 +2,9 @@
 import React from 'react';
 import BackButton from '../components/BackButton';
 import Contact from '../components/Contact';
+import BodyCatTwo from '../components/BodyCatTwo';
+import BodyCat from '../components/BodyCat';
+import Overview from '../components/Overview';
 
 type Props = {}
 
@@ -21,8 +24,41 @@ const page = (props: Props) => {
           </div>
         </div>
       </div>
-      <Contact
-        className="h-[400px]" />
+
+      <div className="p-[15px] container pt-[50px] mx-auto">
+        <BodyCat />
+
+        <div className="px-[255px] relative py-10">
+          <div className="flex flex-col">
+            <div className="grid grid-cols-[1fr_1fr_1fr_1fr]">
+              <p className="text-[#7f7f7f] text-[14px] font-[400]">Client</p>
+              <p className="text-[#7f7f7f] text-[14px] font-[400]">Studio</p>
+              <p className="text-[#7f7f7f] text-[14px] font-[400]">Role</p>
+              <p className="text-[#7f7f7f] text-[14px] font-[400]">Focus</p>
+            </div>
+
+            <div className="grid grid-cols-[1fr_1fr_1fr_1fr]">
+              <p className="text-[#000000] text-[14px] font-[400]">Propeller</p>
+              <p className="text-[#000000] text-[14px] font-[400]">OH&CO</p>
+              <p className="text-[#000000] text-[14px] font-[400]">Lead Designer</p>
+              <p className="text-[#000000] text-[14px] font-[400]">Brand & Digital</p>
+            </div>
+          </div>
+        </div>
+
+        <BodyCatTwo />
+
+        <div className="px-[255px] relative py-10">
+          <p className="text-[#7f7f7f] text-[16px] font-[500]">Overview</p>
+          <p className="w-[540px] text-[14px] font-[400]">I worked with Propeller to design their brand identity and design language.
+            The name Propeller was inspired by the companies overall objective — to propel great business ideas. The identity was designed with this very objective in mind.
+            The logomark is formed from a propeller shape to create a unique letter P. In addition to the brand I also worked with Propeller to develop their product interface as well as their website visuals.</p>
+        </div>
+
+        <Overview />
+
+        <Contact className="h-[400px]" />
+      </div>
     </>
   );
 };

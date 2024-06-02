@@ -7,13 +7,16 @@ async function getData() {
 }
 
 // eslint-disable-next-line @next/next/no-async-client-component
-export default async function BodyCat() {
+export default async function BodyCatTwo() {
   const data = await getData();
 
   return (
     <>
-      <div className="w-[100%] flex justify-center">
-        <img src={data[0].url} alt="Cat" className="rounded-[11px] w-[1000px] h-[700px]" />
+      <div className="">
+        <div className="flex flex-row justify-center p-5 gap-5">
+          <img src={data[1].url} alt="Cat" className="rounded-[11px] w-[490px] h-[300px]" />
+          <img src={data[2].url} alt="Cat" className="rounded-[11px] w-[490px] h-[300px]" />
+        </div>
       </div>
     </>
   );
