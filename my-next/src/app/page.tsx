@@ -12,7 +12,7 @@ export default function Home() {
         <CardBody />
       </main>
       <Contact
-        className="h-[50vh]" />
+        className="h-[400px]" />
     </>
   );
 };
