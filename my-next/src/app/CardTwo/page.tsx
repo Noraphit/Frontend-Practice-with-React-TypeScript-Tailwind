@@ -2,6 +2,7 @@
 import React from 'react';
 import BackButton from '../components/BackButton';
 import Contact from '../components/Contact';
+import BodyCat from '../components/BodyCat';
 
 type Props = {}
 
@@ -12,7 +13,7 @@ const page = (props: Props) => {
 
       <div className="">
         <div className="p-[40px] h-[45vh] flex flex-row justify-center items-end">
-          <p className="font-[500] text-[72px] w-[980px] leading-[85px] text-center">Form onboarding to automation A seamless user journey.</p>
+          <p className="font-[500] text-[72px] w-[1100px] leading-[85px] text-center">Form onboarding to automation A seamless user journey.</p>
         </div>
 
         <div className="flex justify-center gap-2">
@@ -21,6 +22,9 @@ const page = (props: Props) => {
           </div>
         </div>
       </div>
+
+      <BodyCat />
+      
       <Contact
         className="h-[400px]" />
     </>

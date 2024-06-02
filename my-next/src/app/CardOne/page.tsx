@@ -1,16 +1,21 @@
-"use client";
-import React from 'react';
+import React from 'react'
 import BackButton from '../components/BackButton';
 import Contact from '../components/Contact';
+import BodyCat from '../components/BodyCat';
 
-type Props = {}
+async function getData() {
+  const res = await fetch("https://api.thecatapi.com/v1/images/search?limit=10");
+  return res.json();
+}
 
-const page = (props: Props) => {
+export default async function page() {
+  const data = await getData();
+
   return (
     <>
       <BackButton />
 
-      <div className="">
+      <div className="pb-10">
         <div className="p-[40px] h-[45vh] flex flex-row justify-center items-end">
           <p className="font-[500] text-[72px] w-[980px] leading-[85px] text-center">A better way to deal with everyday</p>
         </div>
@@ -21,10 +26,10 @@ const page = (props: Props) => {
           </div>
         </div>
       </div>
-      <Contact
-        className="h-[400px]" />
+
+      <BodyCat />
+
+      <Contact className="h-[400px]" />
     </>
   );
 };
-
-export default page;
